@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/all.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="table">
+      <div class="title">
+        <span class="title-span">
+          <i class="fa-solid fa-calendar-check"></i> 低價日曆<i
+            class="fa-solid fa-caret-up"
+          ></i
+        ></span>
+      </div>
+      <div class="tbody-container w100">
+        <div class="tbody-container-left">
+          <div class="around-trip">
+            <div class="txt-right">回程</div>
+            <div class="txt-left">去程</div>
+          </div>
+          <div>12/27 (三)</div>
+          <div>12/28 (四)</div>
+          <div>12/29 (五)</div>
+          <div>12/30 (六)</div>
+          <div>12/31 (日)</div>
+          <div>
+            <div class="flex-container">
+              <span class="color-green txt-right">2018</span> 01/01 (一)
+            </div>
+          </div>
+          <div>01/02 (二)</div>
+        </div>
+        <div class="tbody-container-right">
+          <a id="previous-column" href="#"><</a>
+          <a id="next-column" href="#">></a>
+          <div class="sliding-window">
+            <div class="date">
+              <div class="date-time">
+                <div class="txt-right"></div>
+                <div class="txt-center">12/30 (六)</div>
+              </div>
+              <div>- -</div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>查看</div>
+              <div class="bg-wheat">查看</div>
+              <div>查看</div>
+              <div>查看</div>
+              <div>查看</div>
+            </div>
+            <div class="date">
+              <div class="date-time">
+                <div class="txt-right"></div>
+                <div class="txt-center">12/31 (日)</div>
+              </div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>
+                <div class="cheap">
+                  <div class="arrow"></div>
+                  <div class="orange">最便宜</div>
+                </div>
+                $12,300 <span class="money"> 起</span>
+              </div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">查看</div>
+              <div>查看</div>
+              <div>查看</div>
+              <div>查看</div>
+            </div>
+            <div class="date">
+              <div class="date-time">
+                <div class="test">
+                  <span class="txt-right color-green">2018</span>
+                  <div class="txt-center">01/01 (一)</div>
+                </div>
+              </div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">$15,568 <span class="money"> 起</span></div>
+              <div>查看</div>
+              <div>查看</div>
+              <div>查看</div>
+            </div>
+            <div class="date">
+              <div class="date-time">
+                <div class="txt-right"></div>
+                <div class="txt-center">01/02 (二)</div>
+              </div>
+              <div class="bg-wheat">$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">
+                <div class="cheap">
+                  <div class="arrow"></div>
+                  <div class="orange">最便宜</div>
+                </div>
+                $12,300 <span class="money"> 起</span>
+              </div>
+              <div class="bg-wheat">$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">查看</div>
+              <div class="bg-wheat">查看</div>
+            </div>
+            <div class="date">
+              <div class="date-time">
+                <div class="txt-right"></div>
+                <div class="txt-center">01/03 (三)</div>
+              </div>
+              <div>
+                <div class="cheap">
+                  <div class="arrow"></div>
+                  <div class="orange">最便宜</div>
+                </div>
+                $15,568 <span class="money"> 起</span>
+              </div>
+              <div>$15,568 <span class="money"> 起</span></div>
+
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>查看</div>
+            </div>
+            <div class="date">
+              <div class="date-time">
+                <div class="txt-right"></div>
+                <div class="txt-center">01/04 (四)</div>
+              </div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">$15,568 <span class="money"> 起</span></div>
+              <div>
+                <div class="cheap">
+                  <div class="arrow"></div>
+                  <div class="orange">最便宜</div>
+                </div>
+                $12,300 <span class="money"> 起</span>
+              </div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+            </div>
+            <div class="date">
+              <div class="date-time">
+                <div class="txt-right"></div>
+                <div class="txt-center">01/05 (五)</div>
+              </div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div class="bg-wheat">$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+              <div>$15,568 <span class="money"> 起</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
