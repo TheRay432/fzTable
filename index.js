@@ -29,6 +29,7 @@ $(document).ready(function () {
           if (counter === minwidth * 2) {
             $("#previous-column").css("display", "none");
           }
+          $("#next-column").css("display", "flex");
           $(".date").css("min-width", `${minwidth}px`);
           $(".sliding-window").css("width", `${slideWidth}px`);
           $("#next-column").css("margin-left", `${arrowMargin}px`);
@@ -73,6 +74,11 @@ $(document).ready(function () {
             });
         } else {
           $(".tbody-container-right").animate({ scrollLeft: "0" }, "slow");
+          let txt = $(".tbody-container-right").outerWidth();
+          let minwidth = Math.floor(txt / 7);
+          $(".date").css("min-width", `${minwidth}px`);
+          $("#next-column").css("display", "none");
+          $("#previous-column").css("display", "none");
         }
       },
       500,
