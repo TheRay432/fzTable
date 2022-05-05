@@ -70,7 +70,7 @@ $(document).ready(function () {
       }
     };
     Module.prototype.testClick = function (opt) {
-      $(".date > div").click(function (e) {
+      $(".date > div:not('.date-time')").click(function (e) {
         e.preventDefault();
         let $this = $(this);
         $(".date > div").removeClass("whenclick");
