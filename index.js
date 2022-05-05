@@ -11,33 +11,27 @@ $(document).ready(function () {
       timers[uniqueId] = setTimeout(callback, ms);
     };
   })();
-  $(".frzTable.default").frzTable({
-    count: {
-      slide: 1, // [number]
+  let callFunc = function () {
+    $(".frzTable.default").frzTable({
+      count: {
+        slide: 1, // [number]
 
-      show: 2, // [number]
-    },
+        show: 2, // [number]
+      },
 
-    speed: 0.4, // [number]
+      speed: 0.4, // [number]
 
-    whenClick: function ($element) {
-      $element.addClass("whenclick");
-    },
-  });
+      whenClick: function ($element) {
+        $element.addClass("whenclick");
+      },
+    });
+  };
+  callFunc();
+
   $(window).resize(function () {
     waitForFinalEvent(
       function () {
-        $(".frzTable.default").frzTable({
-          count: {
-            slide: 1, // [number]
-
-            show: 2, // [number]
-          },
-
-          speed: 0.4, // [number]
-
-          whenClick: "1",
-        });
+        callFunc();
         // if ($(window).width() <= 980) {
         //   $(".tbody-container-right").animate({ scrollLeft: "0" }, "slow");
         //   let txt = $(".tbody-container-right").outerWidth();

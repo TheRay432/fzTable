@@ -28,7 +28,7 @@ $(document).ready(function () {
         let slideMany = Math.round(minwidth * `${opt.count.slide}`);
         let counter = minwidth * `${opt.count.show}`;
         let speed = opt.speed * 1000;
-        console.log("begining:", counter);
+
         let slideWidth = Math.round(minwidth * 7);
         let arrowMargin = txt - 15;
         $("#previous-column").css("display", "none");
@@ -43,7 +43,7 @@ $(document).ready(function () {
             event.preventDefault();
 
             counter += slideMany;
-            console.log("+", counter);
+
             if (counter >= slideWidth) {
               $("#next-column").css("display", "none");
             }
