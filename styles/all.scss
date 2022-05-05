@@ -15,8 +15,15 @@
   background-color: rgba(171, 167, 167, 0.598);
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 1rem 1rem;
   margin-bottom: 2px;
+}
+.span-arrow {
+  font-size: 24px;
+  color: red;
+  display: none;
+  font-weight: bold;
 }
 .fa-calendar-check {
   margin-right: 5px;
@@ -187,6 +194,19 @@ a {
 }
 
 @media screen and (max-width: 980px) {
+  .title {
+    justify-content: space-between;
+  }
+  .title-span {
+    color: red;
+    font-size: 24px;
+    & i {
+      display: none;
+    }
+  }
+  .span-arrow {
+    display: block;
+  }
   .tbody-container-left {
     font-size: 12px;
   }
