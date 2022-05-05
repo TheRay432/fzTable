@@ -18,9 +18,11 @@ $(document).ready(function () {
       show: 2, // [number]
     },
 
-    speed: 0.3, // [number]
+    speed: 0.4, // [number]
 
-    whenClick: "1",
+    whenClick: function ($element) {
+      $element.addClass("whenclick");
+    },
   });
   $(window).resize(function () {
     waitForFinalEvent(
@@ -32,7 +34,7 @@ $(document).ready(function () {
             show: 2, // [number]
           },
 
-          speed: 0.3, // [number]
+          speed: 0.4, // [number]
 
           whenClick: "1",
         });

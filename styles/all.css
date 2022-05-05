@@ -261,6 +261,10 @@ a {
   z-index: 5;
 }
 
+.whenclick {
+  border: 1px solid red;
+}
+
 @media screen and (max-width: 980px) {
   .tbody-container-left {
     font-size: 12px;

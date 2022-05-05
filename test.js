@@ -27,6 +27,7 @@ $(document).ready(function () {
         let minwidth = Math.round(txt / `${opt.count.show}`);
         let slideMany = Math.round(minwidth * `${opt.count.slide}`);
         let counter = minwidth * `${opt.count.show}`;
+        let speed = opt.speed * 1000;
         console.log("begining:", counter);
         let slideWidth = Math.round(minwidth * 7);
         let arrowMargin = txt - 15;
@@ -51,7 +52,7 @@ $(document).ready(function () {
             }
             $(".tbody-container-right").animate(
               { scrollLeft: `+=${slideMany}` },
-              "slow"
+              speed
             );
           });
         $("#previous-column")
@@ -67,7 +68,7 @@ $(document).ready(function () {
             }
             $(".tbody-container-right").animate(
               { scrollLeft: `-=${slideMany}` },
-              "slow"
+              speed
             );
           });
       } else {
@@ -79,6 +80,14 @@ $(document).ready(function () {
         $("#next-column").css("display", "none");
         $("#previous-column").css("display", "none");
       }
+    };
+    Module.prototype.testClick = function (opt) {
+      $(".date > div").click(function (e) {
+        e.preventDefault();
+        let $this = $(this);
+        $(".date > div").removeClass("whenclick");
+        opt.whenClick($this);
+      });
     };
 
     $.fn[ModuleName] = function (method, options) {
@@ -96,6 +105,7 @@ $(document).ready(function () {
           obj = $.extend({}, method);
         }
         module.test(obj);
+        module.testClick(method);
       });
     };
   })(jQuery);
