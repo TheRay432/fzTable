@@ -15,7 +15,7 @@ $(document).ready(function () {
     count: {
       slide: 1, // [number]
 
-      show: 6, // [number]
+      show: 2, // [number]
     },
 
     speed: 0.3, // [number]
@@ -29,7 +29,7 @@ $(document).ready(function () {
           count: {
             slide: 1, // [number]
 
-            show: 6, // [number]
+            show: 2, // [number]
           },
 
           speed: 0.3, // [number]

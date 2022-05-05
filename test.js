@@ -27,29 +27,26 @@ $(document).ready(function () {
         let minwidth = Math.round(txt / `${opt.count.show}`);
         let slideMany = Math.round(minwidth * `${opt.count.slide}`);
         let counter = minwidth * `${opt.count.show}`;
+        console.log("begining:", counter);
         let slideWidth = Math.round(minwidth * 7);
         let arrowMargin = txt - 15;
-        if (counter === minwidth * `${opt.count.show}`) {
-          $("#previous-column").css("display", "none");
-        }
+        $("#previous-column").css("display", "none");
         $("#next-column").css("display", "flex");
         $(".date").css("min-width", `${minwidth}px`);
         $(".sliding-window").css("width", `${slideWidth}px`);
         $("#next-column").css("margin-left", `${arrowMargin}px`);
-        console.log("txt:", txt);
-        console.log("counter:", counter);
-        console.log("minwidth:", minwidth);
+
         $("#next-column")
           .unbind("click")
           .click(function (event) {
             event.preventDefault();
 
-            counter += minwidth;
+            counter += slideMany;
             console.log("+", counter);
-            if (counter === minwidth * 7) {
+            if (counter >= slideWidth) {
               $("#next-column").css("display", "none");
             }
-            if (counter !== minwidth * 2) {
+            if (counter !== minwidth * `${opt.count.show}`) {
               $("#previous-column").css("display", "flex");
             }
             $(".tbody-container-right").animate(
@@ -61,8 +58,8 @@ $(document).ready(function () {
           .unbind("click")
           .click(function (event) {
             event.preventDefault();
-            counter -= minwidth;
-            if (counter !== minwidth * 7) {
+            counter -= slideMany;
+            if (counter <= slideWidth) {
               $("#next-column").css("display", "flex");
             }
             if (counter == minwidth * `${opt.count.show}`) {
@@ -98,8 +95,6 @@ $(document).ready(function () {
         } else {
           obj = $.extend({}, method);
         }
-        console.log(obj);
-
         module.test(obj);
       });
     };

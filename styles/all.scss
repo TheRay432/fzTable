@@ -204,3 +204,12 @@ a {
     display: flex;
   }
 }
+@media screen and (max-width: 550px) {
+  .date > div {
+    font-size: 12px;
+  }
+  .arrow {
+    border-top: 10px solid orange;
+    border-right: 10px solid transparent;
+  }
+}
