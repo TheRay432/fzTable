@@ -204,7 +204,6 @@
 .arrow {
   width: 0px;
   height: 0px;
-  margin-left: -1px;
   display: inline-block;
   border-top: 20px solid orange;
   border-right: 20px solid transparent;
