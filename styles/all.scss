@@ -72,7 +72,6 @@
 }
 .tbody-container-right {
   width: calc(100% - 100% / 8);
-
   overflow-x: hidden;
   position: relative;
   & .sliding-window {
@@ -191,6 +190,7 @@ a {
 }
 .whenclick {
   border: 1px solid red;
+  background-color: rgb(247, 219, 166);
 }
 
 @media screen and (max-width: 980px) {
@@ -210,12 +210,6 @@ a {
   .tbody-container-left {
     font-size: 12px;
   }
-  // .tbody-container-right::after {
-  //   display: flex;
-  // }
-  // .tbody-container-right::before {
-  //   display: flex;
-  // }
 
   .tbody-container-right .date {
     min-width: 225px;

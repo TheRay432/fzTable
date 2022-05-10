@@ -273,6 +273,7 @@ a {
 
 .whenclick {
   border: 1px solid red;
+  background-color: #f7dba6;
 }
 
 @media screen and (max-width: 980px) {
