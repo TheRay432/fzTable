@@ -177,12 +177,12 @@ a {
   background-color: rgb(69, 67, 67);
   display: none;
 }
-#previous-column {
+.previous-column {
   position: fixed;
   margin-top: 205px;
   z-index: 5;
 }
-#next-column {
+.next-column {
   position: fixed;
   margin-left: 150px;
   margin-top: 205px;

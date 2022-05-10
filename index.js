@@ -3,7 +3,7 @@ $(document).ready(function () {
     count: {
       slide: 1, // [number]
 
-      show: 2, // [number]
+      show: 3, // [number]
     },
 
     speed: 0.3, // [number]
