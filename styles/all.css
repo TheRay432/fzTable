@@ -14,7 +14,7 @@
 }
 
 .title {
-  background-color: rgba(171, 167, 167, 0.598);
+  background-color: #eaedf2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,8 +69,10 @@
   width: 100%;
   padding: 4px 4px;
   height: 55px;
-  -webkit-box-shadow: 0 0 1px gray;
-          box-shadow: 0 0 1px gray;
+  color: #222;
+  border-bottom: 1px solid #bbb;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,11 +83,12 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #f9e9cb;
+  background-color: #f1f1f1;
 }
 
 .tbody-container-left > div:first-child {
-  background-color: rgba(171, 167, 167, 0.598);
+  color: #666;
+  background-color: #eaedf2;
 }
 
 .tbody-container-left div.around-trip {
@@ -143,8 +146,11 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-box-shadow: 0 0 1px gray;
-          box-shadow: 0 0 1px gray;
+  cursor: pointer;
+  border-bottom: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
   position: relative;
 }
 
@@ -153,7 +159,7 @@
 }
 
 .date > div:first-child {
-  background-color: rgba(171, 167, 167, 0.598);
+  background-color: #eaedf2;
 }
 
 .date > div.date-time {
@@ -167,6 +173,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: auto;
+}
+
+.date > div.whenclick {
+  border: 1px solid #e10600;
+  background-color: #fff9e3;
+}
+
+.date > div:not(.date-time):hover {
+  border: 1px solid #e10600;
 }
 
 .txt-left {
@@ -180,6 +196,7 @@
 
 .txt-center {
   text-align: center;
+  color: #666;
 }
 
 .color-green {
@@ -254,7 +271,7 @@ a {
           align-items: center;
   text-decoration: none;
   color: white;
-  background-color: #454343;
+  background: rgba(171, 171, 171, 0.5);
   display: none;
 }
 
@@ -271,9 +288,8 @@ a {
   z-index: 5;
 }
 
-.whenclick {
-  border: 1px solid red;
-  background-color: #f7dba6;
+.interChange {
+  background-color: #f7f7f7;
 }
 
 @media screen and (max-width: 980px) {

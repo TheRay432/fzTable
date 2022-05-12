@@ -12,7 +12,7 @@
 }
 
 .title {
-  background-color: rgba(171, 167, 167, 0.598);
+  background-color: #eaedf2;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -47,19 +47,23 @@
     padding: 4px 4px;
     height: 55px;
     // border: 1px solid gray;
-
-    box-shadow: 0 0 1px gray;
+    color: #222;
+    // box-shadow: 0 0 1px gray;
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(249, 233, 203);
+    background-color: #f1f1f1;
   }
   // & > div:last-child {
   //   border-bottom: 1px solid gray;
   // }
   & > div:first-child {
-    background-color: rgba(171, 167, 167, 0.598);
+    color: #666;
+    background-color: #eaedf2;
   }
   & div.around-trip {
     display: flex;
@@ -94,24 +98,31 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  // border: 1px solid gray;
-  box-shadow: 0 0 1px gray;
-
-  // border-right: 1px solid gray;
-  // border-left: 1px solid transparent;
+  cursor: pointer;
+  // box-shadow: 0 0 1px gray;
+  border-bottom: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
   position: relative;
   &:last-child {
     margin-bottom: 5px;
-    // border-bottom: 1px solid transparent;
   }
   &:first-child {
-    // border-top: 1px solid transparent;
-    background-color: rgba(171, 167, 167, 0.598);
+    background-color: #eaedf2;
   }
   &.date-time {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: auto;
+  }
+  &.whenclick {
+    border: 1px solid #e10600;
+    background-color: #fff9e3;
+  }
+  &:not(.date-time):hover {
+    border: 1px solid #e10600;
   }
 }
 .txt-left {
@@ -123,6 +134,7 @@
 }
 .txt-center {
   text-align: center;
+  color: #666;
 }
 .color-green {
   color: green;
@@ -174,7 +186,7 @@ a {
   align-items: center;
   text-decoration: none;
   color: white;
-  background-color: rgb(69, 67, 67);
+  background: hsla(0, 0%, 67%, 0.5);
   display: none;
 }
 .previous-column {
@@ -188,9 +200,9 @@ a {
   margin-top: 205px;
   z-index: 5;
 }
-.whenclick {
-  border: 1px solid red;
-  background-color: rgb(247, 219, 166);
+
+.interChange {
+  background-color: #f7f7f7;
 }
 
 @media screen and (max-width: 980px) {

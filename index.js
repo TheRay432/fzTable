@@ -8,8 +8,6 @@ $(document).ready(function () {
 
     speed: 0.3, // [number]
 
-    whenClick: function ($element) {
-      $element.addClass("whenclick");
-    },
+    whenClick: function ($element) {},
   });
 });

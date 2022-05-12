@@ -70,8 +70,15 @@ $(document).ready(function () {
       this.item.click(function (e) {
         e.preventDefault();
         let $this = $(this);
+        let index = $this.index();
         $(".date > div").removeClass("whenclick");
-        opt.whenClick($this);
+        $this.addClass("whenclick");
+        $(".sliding-window div").removeClass("interChange");
+        $this.parent().addClass("interChange");
+        const t = $this.parent().siblings();
+        t.each(function (i, el) {
+          $(el).children().eq(index).addClass("interChange");
+        });
       });
     };
     Module.prototype.nextBtnClick = function () {
@@ -129,16 +136,21 @@ $(document).ready(function () {
 
     $.fn[ModuleName] = function (method) {
       return this.each(function () {
-        // let module = new Module(this, method);
-        let module = null;
+        let $this = $(this);
+        let module = $this.data(ModuleName);
         let opt = null;
-        opt = $.extend(
-          true,
-          Module.DEFAULTS,
-          typeof method === "object" && method
-        );
-        module = new Module(this, opt);
-        module.init(opt, this);
+        if (!!module) {
+        } else {
+          opt = $.extend(
+            true,
+            Module.DEFAULTS,
+            typeof method === "object" && method
+          );
+          module = new Module(this, opt);
+          $this.data(ModuleName, module);
+          console.log($this.data());
+          module.init(opt, this);
+        }
       });
     };
   })(jQuery);
