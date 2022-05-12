@@ -28,7 +28,13 @@ $(document).ready(function () {
       },
     };
 
-    Module.prototype.defaultSize = function (opt) {
+    Module.prototype.init = function (opt, df) {
+      this.defaultSize();
+      this.itemClick(opt);
+      this.reSize(opt, df);
+    };
+
+    Module.prototype.defaultSize = function () {
       let self = this;
       let containerRight = this.$ele.find(".tbody-container-right");
       let prevBtn = this.$ele.find(".previous-column");
@@ -95,7 +101,8 @@ $(document).ready(function () {
         this.speed
       );
     };
-    Module.prototype.reSize = function (module, opt, df) {
+    Module.prototype.reSize = function (opt, df) {
+      let self = this;
       let waitForFinalEvent = (function () {
         var timers = {};
         return function (callback, ms, uniqueId) {
@@ -111,8 +118,8 @@ $(document).ready(function () {
       $(window).resize(function () {
         waitForFinalEvent(
           function () {
-            module = new Module(df, opt);
-            module.defaultSize(opt);
+            self = new Module(df, opt);
+            self.defaultSize(opt);
           },
           500,
           "some unique string"
@@ -131,9 +138,7 @@ $(document).ready(function () {
           typeof method === "object" && method
         );
         module = new Module(this, opt);
-        module.defaultSize(method);
-        module.itemClick(opt);
-        module.reSize(module, opt, this);
+        module.init(opt, this);
       });
     };
   })(jQuery);
